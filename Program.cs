@@ -44,16 +44,19 @@ namespace Abstract_LinkedList
 
             Console.WriteLine();
             Console.WriteLine("Implementation of Queues !");
-
+            //Creating the Queue.
             Queued queued = new Queued();
 
+            //Displays queue
             queued.Display();
 
+            //Gets the first element of queue
             int first = queued.Peek();
             if(first != -999)
             Console.WriteLine("Peek() : First of the Queue = " + first);
             else Console.WriteLine("Queue is empty !");
 
+            //Adding the elements in the rare.
             queued.Pusp(1);
             queued.Pusp(2);
             queued.Pusp(3);
@@ -62,6 +65,7 @@ namespace Abstract_LinkedList
 
             queued.Display();
 
+            //Deleting the elements at the front.
             queued.Pop();
 
             queued.Display();
@@ -70,6 +74,11 @@ namespace Abstract_LinkedList
             queued.Pop();
 
             queued.Display();
+
+            int first1 = queued.Peek();
+            if (first1 != -999)
+                Console.WriteLine("Peek() : First of the Queue = " + first1);
+            else Console.WriteLine("Queue is empty !");
 
         }
     }
