@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Abstract_LinkedList
 {
-    public class Stacked : LinkedList
+    public class Stacked : LinkedListed
     {
         public override void Pusp(int data)
         {
@@ -25,8 +25,15 @@ namespace Abstract_LinkedList
 
         public override void Pop()
         {
-            Console.WriteLine("Deleting the top of the stack containg data = " + Peek());
-            Head = Head.Next;
+            if (!IsEmpty())
+            {
+                Console.WriteLine("Deleting the top of the stack containg data = " + Peek());
+                Head = Head.Next;
+            }
+            else 
+            {
+                Console.WriteLine("Stack is empty");
+            }
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Abstract_LinkedList
 {
     //Linked List is the collection of nodes used for efficient memory management.
-    public abstract class LinkedList
+    public abstract class LinkedListed
     {
         protected NODE Head{ get; set; } = null;
 
@@ -35,7 +35,7 @@ namespace Abstract_LinkedList
         //Displays the Linked List.
         public virtual void Display()
         { 
-            if (Head != null)
+            if (IsEmpty())
             {
                 NODE cur = Head;
                 Console.Write("Head = ");
@@ -45,6 +45,10 @@ namespace Abstract_LinkedList
                     cur = cur.Next;
                 }
                 Console.WriteLine("null.");
+            }
+            else 
+            {
+                Console.WriteLine("It is empty !");
             }
         }
     }
