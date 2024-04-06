@@ -37,7 +37,7 @@ namespace Abstract_LinkedList
         //Displays the Linked List.
         public virtual void Display()
         { 
-            if (IsEmpty())
+            if (!IsEmpty())
             {
                 NODE cur = Head;
                 Console.Write("Head = ");
