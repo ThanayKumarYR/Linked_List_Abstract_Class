@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 namespace Abstract_LinkedList
 {
     //Linked List is the collection of nodes used for efficient memory management.
-    public abstract class LinkedListed
+    public abstract class LinkedListed<T>
     {
-        protected NODE Head{ get; set; } = null;
+        protected NODE<T> Head{ get; set; } = null;
 
         //Abstact methodes needs implementation from derived class.
-        public abstract void Pusp(int data);
+        public abstract void Pusp(T data);
         public abstract void Pop();
 
         /*
@@ -27,11 +27,11 @@ namespace Abstract_LinkedList
         }
 
         //Returns the data of head node.
-        public int Peek()
+        public T Peek()
         {
             if (!IsEmpty())
                 return Head.Info;
-            else return -999;
+            else throw new ApplicationException("It is empty !");
         }
 
         //Displays the Linked List.
@@ -39,7 +39,7 @@ namespace Abstract_LinkedList
         { 
             if (!IsEmpty())
             {
-                NODE cur = Head;
+                NODE<T> cur = Head;
                 Console.Write("Head = ");
                 while (cur != null)
                 {

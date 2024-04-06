@@ -6,18 +6,20 @@ using System.Threading.Tasks;
 
 namespace Abstract_LinkedList
 {
-    public class Stacked : LinkedListed
+    public class Stacked<T> : LinkedListed<T>
     {
-        public override void Pusp(int data)
+        public override void Pusp(T data)
         {
             if (IsEmpty())
             { 
-                Head = new NODE(data);
+                Head = new NODE<T>(data);
             }
             else
             {
-                NODE newNode = new NODE(data);
-                newNode.Next = Head;
+                NODE<T> newNode = new NODE<T>(data)
+                {
+                    Next = Head
+                };
                 Head = newNode;
             }
 
