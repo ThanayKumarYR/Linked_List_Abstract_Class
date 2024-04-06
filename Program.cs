@@ -41,36 +41,6 @@ namespace Abstract_LinkedList
             if (topElement != -999)
                 Console.WriteLine($"Peek() : Top of the stack = {topElement}");
             else Console.WriteLine("Stack is empty !");
-
-            Console.WriteLine();
-            Console.WriteLine("Implementation of Queues !");
-
-            Queued queued = new Queued();
-
-            queued.Display();
-
-            int first = queued.Peek();
-            if(first != -999)
-            Console.WriteLine("Peek() : First of the Queue = " + first);
-            else Console.WriteLine("Queue is empty !");
-
-            queued.Pusp(1);
-            queued.Pusp(2);
-            queued.Pusp(3);
-            queued.Pusp(4);
-            queued.Pusp(5);
-
-            queued.Display();
-
-            queued.Pop();
-
-            queued.Display();
-
-            queued.Pop();
-            queued.Pop();
-
-            queued.Display();
-
         }
     }
 }
