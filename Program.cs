@@ -38,7 +38,10 @@ namespace Abstract_LinkedList
             //Peek() returns the element in the top of stack.
             int topElement = stacked.Peek();
 
-            Console.WriteLine($"Peek() : Top of the stack = {topElement}");
+            if (topElement != -999)
+                Console.WriteLine($"Peek() : Top of the stack = {topElement}");
+            else Console.WriteLine("Stack is empty !");
+
         }
     }
 }

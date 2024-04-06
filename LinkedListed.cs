@@ -29,7 +29,9 @@ namespace Abstract_LinkedList
         //Returns the data of head node.
         public int Peek()
         {
-            return Head.Info;
+            if (!IsEmpty())
+                return Head.Info;
+            else return -999;
         }
 
         //Displays the Linked List.
