@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Abstract_LinkedList
 {
+    //Node is the single unit of Linked List to store the data and reference to next node.
     public class NODE
     {
         public int Info { get; set; }

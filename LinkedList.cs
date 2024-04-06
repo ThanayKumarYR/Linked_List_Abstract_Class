@@ -6,33 +6,45 @@ using System.Threading.Tasks;
 
 namespace Abstract_LinkedList
 {
+    //Linked List is the collection of nodes used for efficient memory management.
     public abstract class LinkedList
     {
-        public abstract NODE Head{ get; }
+        protected NODE Head{ get; set; } = null;
 
-        public abstract void Pusp();
+        //Abstact methodes needs implementation from derived class.
+        public abstract void Pusp(int data);
         public abstract void Pop();
 
+        /*
+          Non - Abstarct methode, can only be used by derived class,
+          after the providing implimentation to all abstarct mthodes 
+        */
+
+        //Checks if Linked List is empty or not ?
         public bool IsEmpty()
         { 
             return Head == null;
         }
 
-        public void Peek()
+        //Returns the data of head node.
+        public int Peek()
         {
-            Console.WriteLine("Element to be poped is " + Head.Info);
+            return Head.Info;
         }
 
-        public void Display()
+        //Displays the Linked List.
+        public virtual void Display()
         { 
             if (Head != null)
             {
                 NODE cur = Head;
+                Console.Write("Head = ");
                 while (cur != null)
                 {
-                    Console.WriteLine($"{cur.Info} -> ");
+                    Console.Write($"{cur.Info} -> ");
                     cur = cur.Next;
                 }
+                Console.WriteLine("null.");
             }
         }
     }
